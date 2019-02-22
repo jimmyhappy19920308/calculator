@@ -1,0 +1,22 @@
+@mixin button{
+  width: 72px;
+  height: 64px;
+  line-height: 64px;
+  margin: 0 7.75px;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 300;
+  &:hover {
+    box-shadow: 0 0 3px #ff7600;
+    border-radius: 16px;
+  }
+  &:active {
+    background-color: #ff7600;
+    border-radius: 16px;
+  }
+}

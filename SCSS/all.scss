@@ -1,0 +1,130 @@
+@import './variable';
+@import './mixin';
+@import './reset';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+body {
+  font-size: 16px;
+}
+
+.container {
+  max-width: $max-width;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: $background-color;
+}
+
+.calculator {
+  width: 350px;
+  height: 525px;
+  background-color: #062145;
+  border-radius: 20px;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+.calculator-header {
+  background-color: #041936;
+  height: 109px;
+  border-radius: 16px 16px 0 0;
+}
+
+.expression {
+  color: #00C4FF;
+  height: 19px;
+  line-height: 16px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: right;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.result {
+  height: 66px;
+  padding-right: 16px;
+  padding-left: 16px;
+  text-align: right;
+  font-size: 3.5rem;
+  line-height: 56px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.calculator-body {
+  position: absolute;
+  bottom: 0;
+  padding: 16px 0;
+  font-size: 0px;
+}
+
+.number {
+  @include button;
+}
+
+.operator {
+  @include button;
+  border-radius: 16px;
+  background-color: #041936;
+}
+
+.float {
+  @include button;
+}
+
+.all-clear, .clear {
+  width: 72px;
+  height: 64px;
+  line-height: 64px;
+  margin: 0 7.75px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #00C4FF;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 500;
+  &:hover {
+    box-shadow: 0 0 3px #ff7600;
+    border-radius: 16px;
+  }
+  &:active {
+    background-color: #ff7600;
+    border-radius: 16px;
+  }
+}
+
+.equal {
+  width: 155px;
+  height: 64px;
+  line-height: 64px;
+  margin: 0 7.75px;
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 500;
+  float: right;
+  background: linear-gradient(to right, #00C4FF, #6C00FF);
+  &:hover {
+    box-shadow: 0 0 3px #ff7600;
+    border-radius: 16px;
+    background: linear-gradient(to right, #00C4FF, #6C00FF);
+  }
+  &:active {
+    box-shadow: 0 0 3px #ff7600;
+    border-radius: 16px;
+    background: linear-gradient(to right, #ff7600, #6C00FF);
+  }
+}
+
+
+

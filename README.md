@@ -16,7 +16,7 @@
 6. 點擊小數點以外的運算子時如果還沒有按其他數字接著點擊數字按鈕，會清除運算子顯示點擊的數字按鈕到計算結果中
 7. 數字不能除以 0
 8. 數字會要有千分位
-9. 數字位數太不不能破版
+9. 數字位數太多不能破版
 10. 點擊等號運算子時會更新顯示的表達式(將新按的數字更新到運算式)並將運算式計算後回傳結果到計算結果中,
 11. 點擊等號運算子時如果只有一個數字則回傳目前的數字,
 12. 點擊等號運算子時如果只有一個數字與一個運算子,則刪除運算子回傳數字
@@ -37,8 +37,12 @@
 [重新認識 JavaScript: Day 06 運算式與運算子](https://ithelp.ithome.com.tw/articles/10191180)
 
 [CodePen 1](https://codepen.io/wilightmoment/pen/rPqwYb?editors=0010)
+
 [CodePen 2](https://codepen.io/anon/pen/JxOLLg)
+
 [[JavaScript 地下城] LV 3— 計算機](https://medium.com/pvt5r486/javascript-%E5%9C%B0%E4%B8%8B%E5%9F%8E-lv-3-%E8%A8%88%E7%AE%97%E6%A9%9F-faa3d7f731e5)
+
 [簡易計算機實作 (javascript)](http://frontend-murmur.logdown.com/posts/291293-simple-calculator-implemented-javascript)
+
 [怎样给数字添加千分符的](https://juejin.im/post/5b026bbb5188256720345bb4)
 

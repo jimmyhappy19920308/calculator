@@ -78,16 +78,8 @@ body {
 }
 
 .all-clear, .clear {
-  width: 72px;
-  height: 64px;
-  line-height: 64px;
-  margin: 0 7.75px;
-  font-size: 1.5rem;
-  text-decoration: none;
+  @include button;
   color: #00C4FF;
-  display: inline-block;
-  text-align: center;
-  font-family: 'Roboto';
   font-weight: 500;
   &:hover {
     box-shadow: 0 0 3px #ff7600;
@@ -101,16 +93,7 @@ body {
 
 .equal {
   width: 155px;
-  height: 64px;
-  line-height: 64px;
-  margin: 0 7.75px;
-  display: inline-block;
-  text-decoration: none;
-  color: #ffffff;
   border-radius: 16px;
-  font-size: 1.5rem;
-  text-align: center;
-  font-family: 'Roboto';
   font-weight: 500;
   float: right;
   background: linear-gradient(to right, #00C4FF, #6C00FF);

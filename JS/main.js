@@ -7,7 +7,8 @@ for(let i = 0; i < numbers.length; i++) {
 }
 
 function inputNumber(e) {
-  console.log(e.target.innerHTML);
   tempNumber += e.target.innerHTML;
   result.innerHTML = parseInt(tempNumber, 10);
 }
+
+

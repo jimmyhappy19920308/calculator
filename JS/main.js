@@ -11,5 +11,10 @@ decimal.addEventListener('click', inputValue, false);
 
 function inputValue(e) {
   tempNumber += e.target.innerHTML;
-  result.innerHTML = tempNumber.slice(1);
+  
+  if(tempNumber[1] === '0' && tempNumber[2] !== '.' && tempNumber[2] > 0) {
+    result.innerHTML = tempNumber.slice(2);
+  } else {
+    result.innerHTML = tempNumber.slice(1);
+  }
 }

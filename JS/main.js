@@ -10,11 +10,18 @@ for(let i = 0; i < numbers.length; i++) {
 decimal.addEventListener('click', inputValue, false);
 
 function inputValue(e) {
-  tempNumber += e.target.innerHTML;
+  const value = e.target.innerHTML;
+
+  tempNumber += value;
+
+  if (tempNumber === '0') {
+		result.innerHTML = '0';
+	}	else if (tempNumber[0] ==='0' && tempNumber[1] !== '.' && tempNumber.length >= 1) {
+		tempNumber = tempNumber[1];
+		result.innerHTML = tempNumber;
+	}	else { 
+		result.innerHTML = tempNumber;
+	}
+
   
-  if(tempNumber[1] === '0' && tempNumber[2] !== '.' && tempNumber[2] > 0) {
-    result.innerHTML = tempNumber.slice(2);
-  } else {
-    result.innerHTML = tempNumber.slice(1);
-  }
 }

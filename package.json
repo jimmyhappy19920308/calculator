@@ -1,0 +1,22 @@
+{
+  "name": "3f-calculator",
+  "version": "1.0.0",
+  "description": "calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yingming25/calculator.git"
+  },
+  "author": "yingming25",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yingming25/calculator/issues"
+  },
+  "homepage": "https://github.com/yingming25/calculator#readme",
+  "devDependencies": {
+    "eslint": "^5.14.1"
+  }
+}

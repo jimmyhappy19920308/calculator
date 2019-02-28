@@ -22,6 +22,4 @@ function inputValue(e) {
   } else {
     result.innerHTML = tempNumber;
   }
-
-
 }

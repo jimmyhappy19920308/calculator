@@ -1,7 +1,11 @@
 const numbers = document.querySelectorAll('.number');
 const decimal = document.querySelector('.decimal');
+const operators = document.querySelectorAll('.operator');
+const expression = document.querySelector('.expression');
 const result = document.querySelector('.result');
 let tempNumber = '0';
+let repeatClickOperator = false;
+let expressions = [];
 
 function inputValue(e) {
   const value = e.target.innerHTML;
@@ -18,8 +22,38 @@ function inputValue(e) {
   }
 }
 
+function inputOperator(e) {
+  let operator = e.target.innerHTML;
+
+  repeatClickOperator = false;
+
+  if (operator === '÷') {
+    operator = '/';
+  } else if (operator === '×') {
+    operator = '*';
+  }
+
+  if (repeatClickOperator === false) {
+    expressions.push(tempNumber);
+    expressions.push(operator);
+
+    for (let i = 0; i < expressions.length; i++) {
+      expression.innerHTML += ` ${expressions[i]} `;
+    }
+  }
+
+  tempNumber = '0';
+  expressions = [];
+
+  repeatClickOperator = true;
+}
+
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener('click', inputValue, false);
 }
 
 decimal.addEventListener('click', inputValue, false);
+
+for (let i = 0; i < operators.length; i++) {
+  operators[i].addEventListener('click', inputOperator, false);
+}

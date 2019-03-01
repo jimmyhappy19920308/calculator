@@ -40,6 +40,8 @@ A1: 重新思考儲存數字的方式，從原本把數字加進陣列改成用�
 
 [CodePen 2](https://codepen.io/anon/pen/JxOLLg)
 
+[CodePen 3](https://codepen.io/anon/pen/xBGOLy)
+
 [[JavaScript 地下城] LV 3— 計算機](https://medium.com/pvt5r486/javascript-%E5%9C%B0%E4%B8%8B%E5%9F%8E-lv-3-%E8%A8%88%E7%AE%97%E6%A9%9F-faa3d7f731e5)
 
 [[六角學院] 新手 JS 地下城 — 3F 計算機](https://medium.com/@songrob/%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2-%E6%96%B0%E6%89%8Bjs%E5%9C%B0%E4%B8%8B%E5%9F%8E-3f-%E8%A8%88%E7%AE%97%E6%A9%9F-f851862389a8)

@@ -34,11 +34,19 @@ function inputOperator(e) {
   }
 
   if (repeatClickOperator === false) {
-    expressions.push(tempNumber);
-    expressions.push(operator);
+    if (operator !== '=') {
+      expressions.push(tempNumber);
+      expressions.push(operator);
 
-    for (let i = 0; i < expressions.length; i++) {
-      expression.innerHTML += ` ${expressions[i]} `;
+      for (let i = 0; i < expressions.length; i++) {
+        expression.innerHTML += ` ${expressions[i]} `;
+      }
+    } else {
+      expressions.push(tempNumber);
+
+      for (let i = 0; i < expressions.length; i++) {
+        expression.innerHTML += ` ${expressions[i]} `;
+      }
     }
   }
 

@@ -22,6 +22,10 @@ function inputValue(e) {
   }
 }
 
+function compute(fullExpression) {
+  result.innerHTML = eval(fullExpression);
+}
+
 function inputOperator(e) {
   let operator = e.target.innerHTML;
 
@@ -47,6 +51,12 @@ function inputOperator(e) {
       for (let i = 0; i < expressions.length; i++) {
         expression.innerHTML += ` ${expressions[i]} `;
       }
+
+      const fullExpression = expression.innerHTML;
+
+      compute(fullExpression);
+
+      expressions = [];
     }
   }
 

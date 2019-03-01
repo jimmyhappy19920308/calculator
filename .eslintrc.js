@@ -13,6 +13,7 @@ module.exports = {
     "sourceType": "module"
   },
   "rules": {
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-eval": 0
   }
 };

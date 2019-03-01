@@ -55,8 +55,6 @@ function inputOperator(e) {
       const fullExpression = expression.innerHTML;
 
       compute(fullExpression);
-
-      expressions = [];
     }
   }
 

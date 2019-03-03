@@ -23,8 +23,7 @@ function inputValue(e) {
 }
 
 function compute(fullExpression) {
-  console.log(fullExpression);
-  // result.innerHTML = eval(fullExpression);
+  result.innerHTML = eval(fullExpression);
 }
 
 function inputOperator(e) {

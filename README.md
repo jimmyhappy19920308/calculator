@@ -50,6 +50,8 @@ A2: 在 html 的 減號運算子(從設計稿直接複製過來的)不是正確�
 
 [[六角學院] 新手 JS 地下城 — 3F 計算機](https://medium.com/@songrob/%E5%85%AD%E8%A7%92%E5%AD%B8%E9%99%A2-%E6%96%B0%E6%89%8Bjs%E5%9C%B0%E4%B8%8B%E5%9F%8E-3f-%E8%A8%88%E7%AE%97%E6%A9%9F-f851862389a8)
 
+[JavaScript 浮點數陷阱及解法](https://github.com/camsong/blog/issues/9)
+
 [簡易計算機實作 (javascript)](http://frontend-murmur.logdown.com/posts/291293-simple-calculator-implemented-javascript)
 
 [怎样给数字添加千分符的](https://juejin.im/post/5b026bbb5188256720345bb4)

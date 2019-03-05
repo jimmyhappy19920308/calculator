@@ -48,13 +48,13 @@ function inputOperator(e) {
       expressions.push(operator);
 
       for (let i = 0; i < expressions.length; i++) {
-        expression.innerHTML += `${expressions[i]}`;
+        expression.innerHTML += ` ${expressions[i]} `;
       }
     } else {
       expressions.push(tempNumber);
 
       for (let i = 0; i < expressions.length; i++) {
-        expression.innerHTML += `${expressions[i]}`;
+        expression.innerHTML += ` ${expressions[i]} `;
       }
 
       const fullExpression = expression.innerHTML;

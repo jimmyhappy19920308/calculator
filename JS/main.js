@@ -7,6 +7,10 @@ let tempNumber = '0';
 let repeatClickOperator = false;
 let expressions = [];
 
+function strip(num, precision = 12) {
+  return +parseFloat(num.toPrecision(precision));
+}
+
 function inputValue(e) {
   const value = e.target.innerHTML;
 
@@ -23,7 +27,8 @@ function inputValue(e) {
 }
 
 function compute(fullExpression) {
-  result.innerHTML = eval(fullExpression);
+  const computedResult = eval(fullExpression);
+  result.innerHTML = strip(computedResult);
 }
 
 function inputOperator(e) {

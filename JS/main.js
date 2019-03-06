@@ -65,14 +65,7 @@ function inputOperator(e) {
   }
 
   if (repeatClickOperator === false) {
-    if (operator !== '=') {
-      expressions.push(tempNumber);
-      expressions.push(operator);
-
-      for (let i = 0; i < expressions.length; i++) {
-        expression.innerHTML += ` ${expressions[i]} `;
-      }
-    } else {
+    if (operator === '=') {
       expressions.push(tempNumber);
 
       for (let i = 0; i < expressions.length; i++) {
@@ -82,6 +75,13 @@ function inputOperator(e) {
       const fullExpression = expression.innerHTML;
 
       compute(fullExpression);
+    } else {
+      expressions.push(tempNumber);
+      expressions.push(operator);
+
+      for (let i = 0; i < expressions.length; i++) {
+        expression.innerHTML += ` ${expressions[i]} `;
+      }
     }
   }
 

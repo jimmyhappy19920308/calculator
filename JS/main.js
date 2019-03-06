@@ -1,16 +1,36 @@
+/**
+ * @global
+ */
 const numbers = document.querySelectorAll('.number');
 const decimal = document.querySelector('.decimal');
 const operators = document.querySelectorAll('.operator');
 const expression = document.querySelector('.expression');
 const result = document.querySelector('.result');
-let tempNumber = '0';
-let repeatClickOperator = false;
-let expressions = [];
 
+let tempNumber = '0'; // ????
+let repeatClickOperator = false; // ?????????
+let expressions = []; // ?????
+
+
+/**
+ * @function
+ * @param {string} num - ???
+ * @param {number} [precision=12] - ????
+ * @returns {number} ????????
+ */
 function strip(num, precision = 12) {
   return +parseFloat(num.toPrecision(precision));
 }
 
+
+/**
+ * @function
+ * @param {EventTarget} e - Clicked number button.
+ * @description ??????????
+ * @description ????????????, ?????????(????)
+ * @description ?????? 1 ??? 0 ,? 2 ???? '.' ???????? 1 ,?? 2 ????????
+ * @description ??????????????
+ */
 function inputValue(e) {
   const value = e.target.innerHTML;
 
@@ -25,6 +45,7 @@ function inputValue(e) {
     result.innerHTML = tempNumber;
   }
 }
+
 
 function compute(fullExpression) {
   const computedResult = eval(fullExpression);
@@ -68,6 +89,7 @@ function inputOperator(e) {
 
   repeatClickOperator = true;
 }
+
 
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener('click', inputValue, false);

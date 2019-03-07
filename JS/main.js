@@ -38,9 +38,9 @@ function compute(fullExpression) {
 function inputOperator(e) {
   let operator = e.target.innerHTML;
 
-  if (operator === 'Ã·') {
+  if (operator === '÷') {
     operator = '/';
-  } else if (operator === 'Ã—') {
+  } else if (operator === '×') {
     operator = '*';
   }
 

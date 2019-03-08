@@ -56,7 +56,5 @@ A3: 先將計算結果用 toPrecision 湊整數,再用 parseFloat 轉成小數
 
 [JavaScript 浮點數陷阱及解法](https://github.com/camsong/blog/issues/9)
 
-[簡易計算機實作 (javascript)](http://frontend-murmur.logdown.com/posts/291293-simple-calculator-implemented-javascript)
-
 [怎样给数字添加千分符的](https://juejin.im/post/5b026bbb5188256720345bb4)
 

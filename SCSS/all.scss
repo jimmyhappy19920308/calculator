@@ -42,6 +42,13 @@ body {
   text-align: right;
   font-family: 'Roboto';
   font-weight: 400;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+ /* for Chrome */
+.expression::-webkit-scrollbar {
+  display: none;
 }
 
 .result {
@@ -54,6 +61,12 @@ body {
   color: #ffffff;
   font-family: 'Roboto';
   font-weight: 400;
+  overflow: scroll;
+}
+
+ /* for Chrome */
+.result::-webkit-scrollbar {
+  display: none;
 }
 
 .calculator-body {

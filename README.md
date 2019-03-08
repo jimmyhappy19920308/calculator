@@ -42,9 +42,11 @@ A3: 先將計算結果用 toPrecision 湊整數,再用 parseFloat 轉成小數
 
 [CodePen 1](https://codepen.io/wilightmoment/pen/rPqwYb?editors=0010)
 
-[CodePen 2](https://codepen.io/anon/pen/JxOLLg)
+[CodePen 2](https://codepen.io/ren096358/pen/bzjdYo)
 
-[CodePen 3](https://codepen.io/anon/pen/xBGOLy)
+[CodePen 3](https://codepen.io/anon/pen/JxOLLg)
+
+[CodePen 4](https://codepen.io/anon/pen/xBGOLy)
 
 [JS 地下城：3F - 計算機](https://mtwmt.github.io/blog/JSBOSS/3f/)
 

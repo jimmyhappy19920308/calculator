@@ -6,6 +6,7 @@ const result = document.querySelector('.result'); // 選取計算結果顯示區
 let tempNumber = '0'; // 儲存暫存數字的變數, 預設為 0
 let repeatClickOperator = false; // 判斷是否重複點擊運算子的變數, 預設為 false
 let expressions = []; // 儲存表達式陣列的變數, 預設為空陣列
+let hadDecimal = false;
 
 /**
  * @function
@@ -28,6 +29,10 @@ function inputValue(e) {
 
   repeatClickOperator = false; // 將重複點擊運算子的變數設為 false ,以便在點擊運算子時能順利執行
 
+  if (value === '.' && hadDecimal === true) { // 如果點擊的按鈕為小數點以及 有小數點的狀態為 true, 則中斷程式碼
+    return;
+  }
+
   tempNumber += value; // 將點擊的數字或小數點, 組字串給暫存數字的變數
 
   /*
@@ -40,6 +45,10 @@ function inputValue(e) {
     result.innerHTML = tempNumber;
   } else {
     result.innerHTML = tempNumber;
+  }
+
+  if (value === '.') { // 如果點擊的按鈕的值為小數點, 則將有小數點的狀態改為 true , 以防止重複點擊
+    hadDecimal = true;
   }
 }
 
@@ -69,6 +78,8 @@ function inputOperator(e) {
   } else if (operator === '×') {
     operator = '*';
   }
+
+  hadDecimal = false; // 將暫存數字有小數點的狀態改為 false , 讓剛按完運算子後可以按小數點
 
   /*
     如果重複點擊運算子的變數等於 false , 點擊等號運算子時, 對表達式進行計算

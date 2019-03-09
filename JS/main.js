@@ -108,7 +108,7 @@ function inputOperator(e) {
 
       const correctPrecisionResult = strip(computedResult);
 
-      result.innerHTML = correctPrecisionResult;
+      result.innerHTML = toCurrency(correctPrecisionResult);
     } else {
       expressions.push(tempNumber);
       expressions.push(operator);

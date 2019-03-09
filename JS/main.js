@@ -6,15 +6,16 @@ const result = document.querySelector('.result'); // 選取計算結果顯示區
 let tempNumber = '0'; // 儲存暫存數字的變數, 預設為 0
 let repeatClickOperator = false; // 判斷是否重複點擊運算子的變數, 預設為 false
 let expressions = []; // 儲存表達式陣列的變數, 預設為空陣列
-let hadDecimal = false;
+let hadDecimal = false; // 判斷暫存數字是否已經有小數點, 預設為 false
 
-let originExpression = '';
+let originExpression = ''; // 用來存放沒有加上千分位的表達式, 預設為空字串
 
 /**
  * @function
  * @param {string} num - 計算結果(有誤差的浮點數)
  * @param {number} [precision=12] - 浮點數精度
- * @returns 計算結果(如果是浮點數則回傳正確精度的浮點數)
+ * @description 如果是浮點數會將精度修正
+ * @returns 正確精度的計算結果
  */
 function strip(num, precision = 12) {
   return +parseFloat(num.toPrecision(precision)); // toPrecision 方法可在超出指定位數時將其轉換為指數計數法
@@ -23,14 +24,20 @@ function strip(num, precision = 12) {
 /**
  * @function
  * @param {string} fullExpression - 預計算的表達式
- * @description 將表達式傳入 eval 方法進行計算, 並將計算結果傳入 strip 方法進行浮點數精度修正,
- * 將正確的計算結果賦值給計算結果區塊元素, 以便在計算結果區塊元素中呈現
+ * @description 將表達式傳入 eval 方法進行計算,
+ * @returns 計算結果
  */
 function compute(fullExpression) {
   const computedResult = eval(fullExpression);
   return computedResult;
 }
 
+/**
+ * @function
+ * @param {string} num - 暫存的數字或運算子
+ * @description 將數字加上千份位
+ * @returns 加上千分位的數字
+ */
 function toCurrency(num) {
   const parts = num.toString().split('.');
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');

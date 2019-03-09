@@ -8,6 +8,8 @@ let repeatClickOperator = false; // 判斷是否重複點擊運算子的變數, 
 let expressions = []; // 儲存表達式陣列的變數, 預設為空陣列
 let hadDecimal = false;
 
+let originExpression = '';
+
 /**
  * @function
  * @param {string} num - 計算結果(有誤差的浮點數)
@@ -63,6 +65,12 @@ function compute(fullExpression) {
   result.innerHTML = strip(computedResult);
 }
 
+function toCurrency(num) {
+  const parts = num.toString().split('.');
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return parts.join('.');
+}
+
 /**
  * @function
  * @param {object} e - 運算子按鈕元素的點擊事件
@@ -90,18 +98,22 @@ function inputOperator(e) {
       expressions.push(tempNumber);
 
       for (let i = 0; i < expressions.length; i++) {
-        expression.innerHTML += ` ${expressions[i]} `;
+        let newNumberOrOperator = ''; // 用來存放加上千分位後的數字, 預設為空字串
+        originExpression += expressions[i]; // 將表達式中的成員(未加上千分位的數字或運算子)組字串儲存到變數中
+        newNumberOrOperator = toCurrency(expressions[i]); // 將數字加上千分位
+        expression.innerHTML += ` ${newNumberOrOperator} `; // 將加上千分位後的數字或算術運算子組字串顯示到表達式區塊元素中
       }
 
-      const fullExpression = expression.innerHTML;
-
-      compute(fullExpression);
+      compute(originExpression);
     } else {
       expressions.push(tempNumber);
       expressions.push(operator);
 
       for (let i = 0; i < expressions.length; i++) {
-        expression.innerHTML += ` ${expressions[i]} `;
+        let newNumberOrOperator = ''; // 用來存放加上千分位後的數字, 預設為空字串
+        originExpression += expressions[i]; // 將表達式中的成員(未加上千分位的數字或運算子)組字串儲存到變數中
+        newNumberOrOperator = toCurrency(expressions[i]); // 將數字加上千分位
+        expression.innerHTML += ` ${newNumberOrOperator} `; // 將加上千分位後的數字或算術運算子組字串顯示到表達式區塊元素中
       }
     }
   }

@@ -9,7 +9,6 @@ let tempNumber = '0'; // 儲存暫存數字的變數, 預設為 0
 let repeatClickOperator = false; // 判斷是否重複點擊運算子的變數, 預設為 false
 let expressions = []; // 儲存表達式陣列的變數, 預設為空陣列
 let hadDecimal = false; // 判斷暫存數字是否已經有小數點, 預設為 false
-
 let originExpression = ''; // 用來存放沒有加上千分位的表達式, 預設為空字串
 
 /**
@@ -142,6 +141,17 @@ function removeLastValue() {
   result.innerHTML = tempNumber; // 將更新後的暫存數字顯示到計算結果區塊元素中
 }
 
+function reset() {
+  tempNumber = '0'; // 將儲存暫存數字的變數歸 0
+  repeatClickOperator = false; // 將判斷是否重複點擊運算子的變數設為 false
+  expressions = []; // 將儲存表達式陣列的變數設為空陣列
+  hadDecimal = false; // 將判斷暫存數字是否已經有小數點的變數設為 false
+  originExpression = ''; // 將用來存放沒有加上千分位的表達式設為空字串
+
+  expression.innerHTML = '';
+  result.innerHTML = tempNumber;
+}
+
 /* 對每個數字按鈕元素監聽點擊事件,並觸發事件處理函式 */
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener('click', inputValue, false);
@@ -157,3 +167,6 @@ for (let i = 0; i < operators.length; i++) {
 
 /* 對退位按鈕元素監聽點擊事件,並觸發事件處理函式 */
 backspace.addEventListener('click', removeLastValue, false);
+
+/* 對全部清除按鈕監聽點擊事件, 並觸發事件處理函數 */
+allClear.addEventListener('click', reset, false);

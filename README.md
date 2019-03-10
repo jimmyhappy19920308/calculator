@@ -1,5 +1,7 @@
 # 新手 JS 地下城 3F-Calculator
 
+[demo](https://yingming25.github.io/calculator/)
+
 ### BOSS 弱點
 
 1. 【特定技術】數字位數過多時，不能因此而破版，計算機功能皆須齊全

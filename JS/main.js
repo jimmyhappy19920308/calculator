@@ -136,6 +136,11 @@ function inputOperator(e) {
   repeatClickOperator = true; // 將重複點擊運算子的變數賦值為 true , 防止重複點擊運算子
 }
 
+function removeLastValue() {
+  tempNumber = tempNumber.substring(0, tempNumber.length - 1); // 刪除最後1位數字
+  result.innerHTML = tempNumber; // 將更新後的暫存數字顯示到計算結果區塊元素中
+}
+
 /* 對每個數字按鈕元素監聽點擊事件 */
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener('click', inputValue, false);
@@ -148,3 +153,6 @@ decimal.addEventListener('click', inputValue, false);
 for (let i = 0; i < operators.length; i++) {
   operators[i].addEventListener('click', inputOperator, false);
 }
+
+/* 對退位按鈕元素監聽點擊事件,並觸發事件處理函式 */
+backspace.addEventListener('click', removeLastValue, false);

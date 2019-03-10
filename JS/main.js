@@ -141,15 +141,15 @@ function removeLastValue() {
   result.innerHTML = tempNumber; // 將更新後的暫存數字顯示到計算結果區塊元素中
 }
 
-/* 對每個數字按鈕元素監聽點擊事件 */
+/* 對每個數字按鈕元素監聽點擊事件,並觸發事件處理函式 */
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener('click', inputValue, false);
 }
 
-/* 對小數點按鈕元素監聽點擊事件 */
+/* 對小數點按鈕元素監聽點擊事件,並觸發事件處理函式 */
 decimal.addEventListener('click', inputValue, false);
 
-/* 對每個運算子按鈕元素監聽點擊事件 */
+/* 對每個運算子按鈕元素監聽點擊事件,並觸發事件處理函式 */
 for (let i = 0; i < operators.length; i++) {
   operators[i].addEventListener('click', inputOperator, false);
 }

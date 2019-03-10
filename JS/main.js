@@ -60,6 +60,11 @@ function inputValue(e) {
     return;
   }
 
+  /* 如點表達式的值等於 '', 則將畫面上的表達式清空, 以便按完等號後重新開始新的計算  */
+  if (originExpression === '') {
+    expression.innerHTML = '';
+  }
+
   tempNumber += value; // 將點擊的數字或小數點, 組字串給暫存數字的變數
 
   /*
@@ -117,6 +122,8 @@ function inputOperator(e) {
       const correctPrecisionResult = strip(computedResult);
 
       result.innerHTML = toCurrency(correctPrecisionResult);
+
+      originExpression = ''; // 按完等號計算完表達式後將表達式清空
     } else {
       expressions.push(tempNumber);
       expressions.push(operator);

@@ -90,7 +90,7 @@ body {
   @include button;
 }
 
-.all-clear, .clear {
+.all-clear, .backspace {
   @include button;
   color: #00C4FF;
   font-weight: 500;

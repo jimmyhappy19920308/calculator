@@ -105,10 +105,13 @@ body {
 }
 
 .equal {
-  width: 155px;
+  width: 125px;
   border-radius: 16px;
   font-weight: 500;
   float: right;
+  padding-right: 30px;
+  text-align: right;
+  margin-left: 0;
   background: linear-gradient(to right, #00C4FF, #6C00FF);
   &:hover {
     box-shadow: 0 0 3px #ff7600;

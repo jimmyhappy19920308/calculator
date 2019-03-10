@@ -3,6 +3,7 @@ const decimal = document.querySelector('.decimal'); // 選取小數點按鈕元�
 const operators = document.querySelectorAll('.operator'); // 選取運算子按鈕元素群組
 const expression = document.querySelector('.expression'); // 選取表達式顯示區塊元素
 const result = document.querySelector('.result'); // 選取計算結果顯示區塊元素
+const backspace = document.querySelector('.backspace'); // 選取退位按鈕元素
 let tempNumber = '0'; // 儲存暫存數字的變數, 預設為 0
 let repeatClickOperator = false; // 判斷是否重複點擊運算子的變數, 預設為 false
 let expressions = []; // 儲存表達式陣列的變數, 預設為空陣列

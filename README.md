@@ -1,4 +1,4 @@
-# 新手 JS 地下城 3F-Calculator
+# JS 地下城 3F-Calculator
 
 [demo](https://yingming25.github.io/calculator/)
 

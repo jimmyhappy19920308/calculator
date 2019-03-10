@@ -28,10 +28,13 @@
 
 ### 遇到的問題
 1. Q1: 遇到數字與運算子在加進表達式時無法取得數字
+
 A1: 重新思考儲存數字的方式，從原本把數字加進陣列改成用變數暫存
 2. Q2: 遇到要對表達式進行四則運算時發生 "-" 運算子無法正確運算的問題
-A2: 在 html 的 減號運算子(從設計稿直接複製過來的)不是正確的 "-" 運算子
+
+A2: 在 html 的減號運算子(從設計稿直接複製過來的)不是正確的 "-" 運算子
 3. Q3: 計算小數點產生精度問題 (0.1 + 0.2 = 0.30000000000000004)
+
 A3: 先將計算結果用 toPrecision 湊整數,再用 parseFloat 轉成小數
 
 ### 參考來源
@@ -56,5 +59,5 @@ A3: 先將計算結果用 toPrecision 湊整數,再用 parseFloat 轉成小數
 
 [JavaScript 浮點數陷阱及解法](https://github.com/camsong/blog/issues/9)
 
-[怎样给数字添加千分符的](https://juejin.im/post/5b026bbb5188256720345bb4)
+[轉換數字成含千分位的文字](https://dotblogs.com.tw/alenwu_coding_blog/2017/08/11/js_number_to_currency_comma)
 

@@ -137,8 +137,24 @@ function inputOperator(e) {
 }
 
 function removeLastValue() {
-  tempNumber = tempNumber.substring(0, tempNumber.length - 1); // 刪除最後1位數字
-  result.innerHTML = tempNumber; // 將更新後的暫存數字顯示到計算結果區塊元素中
+  const lastValue = tempNumber.slice(-1); // 取得暫存數字的最後一個字元
+
+  /* 如果最後一個字元的值是 '.', 則將已經有小數點的變數設為 false , 以便再次新增小數點 */
+  if (lastValue === '.') {
+    hadDecimal = false;
+  }
+
+  /* 如果暫存數字的變數的值不為 '0', 則刪除最後1位數字後重新顯示 */
+  if (tempNumber !== '0') {
+    tempNumber = tempNumber.substring(0, tempNumber.length - 1); // 刪除最後1位數字
+    result.innerHTML = tempNumber; // 將更新後的暫存數字顯示到計算結果區塊元素中
+  }
+
+  /* 如果暫存數字的變數的值為 '' , 則顯示 '0' */
+  if (tempNumber === '') {
+    tempNumber = '0';
+    result.innerHTML = tempNumber;
+  }
 }
 
 function reset() {

@@ -43,7 +43,6 @@
 
 ### 參考來源
 
-[How to build an HTML calculator app from scratch using JavaScript](https://medium.freecodecamp.org/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98)
 
 [重新認識 JavaScript: Day 06 運算式與運算子](https://ithelp.ithome.com.tw/articles/10191180)
 

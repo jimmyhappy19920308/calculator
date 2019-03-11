@@ -64,3 +64,5 @@
 
 [轉換數字成含千分位的文字](https://dotblogs.com.tw/alenwu_coding_blog/2017/08/11/js_number_to_currency_comma)
 
+[Javascript 文檔註解規則使用方式 @use JSDoc](http://www.ucamc.com/e-learning/javascript/250-javascript-use-jsdoc.html)
+
